@@ -4,20 +4,33 @@
     box-sizing: border-box;
     font-family: sans-serif, 'Poppins';
 }
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('wl.avif') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .container{
     width: 100%;
     min-height: 100vh;
-    background: rgb(223, 145, 137);
+    background: transparent;
     padding: 10px;
-    
 }
+
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background: rgb(182, 230, 211);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 30px;
+    border: 1px solid rgb(102, 102, 102);
+    backdrop-filter: blur(15px);
+    background: rgba(15, 15, 15, 0.1);
 }
 .todo-app h2{
     color: brown;
@@ -40,6 +53,8 @@
     margin-bottom: 30px;
     border-radius: 0px;
     border: 2px solid;
+    flex:1;
+    
 }
 input{
     flex: 1;
@@ -50,13 +65,16 @@ input{
     font-weight: 14px;
 }
 .wrapper{
-    position: fixed;
-    top: 38.4%;
-    left: 65.7%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* top: 54%; */
+    /* left: 89.5%; */
+    /* transform: translate(-50%, -50%); */
+    transform: translateX(-3px);
     background: transparent;
     cursor: cell;
     background: rgb(245, 153, 119);
+    z-index: 1;
+    
     
     
   }
@@ -73,6 +91,7 @@ input{
     cursor: cell;
     padding: 2px;
     
+    
   }
   
   a:hover{
@@ -81,7 +100,7 @@ input{
   ul li{
         list-style: none;
         font-size: 20px;
-        padding: 12px 8px 12px 50px ;
+        padding: 15px 20px 20px 50px ;
         cursor: grab;
         user-select: none;
         cursor: grab;
